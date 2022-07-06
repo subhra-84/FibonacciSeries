@@ -20,8 +20,17 @@ def fibonacciSeries(n):
     return result
 
 def main():
-    n=int(input("How many numbers do you want to generate: "))     
-    print(fibonacciSeries(n))       
+    valid=False
+    while not valid:
+        try:
+            n=int(input("How many numbers do you want to generate: "))  
+            valid=True
+            print(fibonacciSeries(n)) 
+        except ValueError:print('Please enter a non zero whole number only') 
+
+
+       
+      
 
 
 if __name__ == '__main__' :main()
